@@ -1,0 +1,708 @@
+<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="styles/online.css">
+<link rel="stylesheet" href="styles/about.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  >
+ 
+  
+
+  <!-- Topbar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> <a href="tel:+9014331089" style="color: white; text-decoration: underline;">+91 9014331089</a></span>
+            <span><i class="fa-solid fa-envelope"></i> <a href="mailto:muddampoojitha43@gmail.com" style="color: white; text-decoration: underline;">muddampoojitha43@gmail.com</a></span>
+            
+        </div>
+        <div class="social-icons">
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    
+      
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           
+            
+        </div>
+    </div>
+</div>
+
+
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <title>Courses</title>
+   
+   
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="Restaurant Logo">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon (Only visible on small devices) -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
+                <ul class="menu">
+                    <li class="menu-item1">
+                       <a href="index.html">Home</a>
+                       
+                        
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="about.html">About Us</a>
+                       
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="gallery.html">Gallery</a>
+                        <span class="toggle-dropdown">
+                          
+                          
+                        </span>
+                    
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="events.html">Events</a>
+                       
+                        
+                    </li>
+                    
+                 
+                    
+                    <li class="menu-item1"><a href="contact.html">Contact</a></li>
+                    
+                 
+            
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+</body>
+</html>
+
+  
+
+
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-visible');
+        });
+
+        // Toggle dropdown menus
+        const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+                const indicator = toggle.querySelector('.indicator');
+                if (indicator.classList.contains('fa-chevron-down')) {
+                    indicator.classList.remove('fa-chevron-down');
+                    indicator.classList.add('fa-chevron-up');
+                } else {
+                    indicator.classList.remove('fa-chevron-up');
+                    indicator.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(menuItem => {
+        let link = menuItem.querySelector("a"); // Main menu link
+        let dropdown = menuItem.querySelector(".dropdown-menu");
+
+        // Toggle dropdown on click
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link navigation
+            event.stopPropagation(); // Stop the click event from bubbling up
+            closeAllDropdowns(menuItem); // Close other dropdowns
+            menuItem.classList.toggle("active"); // Toggle current dropdown
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        dropdown.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    // Close dropdown when clicking anywhere else
+    document.addEventListener("click", function () {
+        closeAllDropdowns();
+    });
+
+    function closeAllDropdowns(except = null) {
+        menuItems.forEach(item => {
+            if (item !== except) item.classList.remove("active"); // Close other dropdowns
+        });
+    }
+});
+
+</script>
+
+
+
+
+
+<section class="hero-area">
+  <div class="background-overlay"></div>
+  <div class="text-wrapper">
+      <h1 class="primary-title hidden">About Us</h1>
+      <p class="secondary-title hidden">Welcome to Ms Sports</p>
+  </div>
+</section> 
+
+
+<script>
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+  // Select the main heading and subheading elements
+  const mainHeading = document.querySelector('.primary-title');
+  const subHeading = document.querySelector('.secondary-title');
+
+  // Add a delay to reveal the headings
+  setTimeout(() => {
+      // Remove the 'hidden' class to reveal the headings
+      mainHeading.classList.remove('hidden');
+      subHeading.classList.remove('hidden');
+      
+      // Add reveal classes to trigger animations
+      mainHeading.classList.add('show-title');
+      subHeading.classList.add('show-subtitle');
+  }, 500); // Adjust the delay time (in milliseconds) as needed
+});
+
+</script>
+
+
+
+
+
+
+<section class="about-section">
+
+  <div class="image-container">
+      <img src="images/64be56d34cff4a001db5259c.jpg" alt="Cricket Player">
+      <div class="stats">
+          <div class="stat-box"><span>15K+</span><p>Years of Experience</p></div>
+          <div class="stat-box"><span>110+</span><p> With Skilled Trainers</p></div>
+      </div>
+  </div>
+  <div class="text-container">
+    <h4>KNOW ABOUT US 🏏 </h4>
+    <h2 class="heading">Welcome to Our Cricket Coaching Center<br><span></span></h2>
+    <p class="fade-text">Our coaching center is dedicated to training young and aspiring cricketers with world-class techniques and professional guidance. We provide structured coaching for all skill levels, from beginners to advanced players, focusing on both technical skills and physical fitness.! 🏆</p>
+    <ul>
+        <li>🏏 Winners never quit and quitters never win</li>
+        <li>🏆 No one is a failure until they stop trying</li>
+        <li>⚡ Make your competitive juices overcome your excuses</li>
+    </ul>
+</div>
+</section>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let aboutSection = document.querySelector(".about-section");
+  let textContainer = document.querySelector(".text-container");
+  let paragraph = document.querySelector("p");
+
+  let observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              textContainer.style.animation = "swingEntry 1.2s ease forwards";
+              paragraph.style.animation = "fadeIn 0.3s ease forwards";
+              observer.unobserve(aboutSection);
+          }
+      });
+  }, { threshold: 0.3 });
+
+  observer.observe(aboutSection);
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+  <section class="best-trainings">
+    <div class="container">
+      <div class="header1">
+        <h2>Our Best Equipment & Facilities</h2>
+        <p>Whether you’re a beginner looking to kickstart your fitness journey or an experienced athlete striving to reach new heights, our gym offers something for everyone </p>
+      <a href="about.html"> <button class="view-all-btn">View All Services</button></a>
+
+        
+      </div>
+      </div>
+      </section>
+
+
+
+
+      <section class="food-gallery">
+        <div class="grid-container">
+            <div class="grid-item with-caption">
+            <a href="">   <img src="images/eq.avif" alt="Cheese Sandwich"></a>
+              
+            
+            </div>
+            <div class="grid-item with-caption">
+              <a href=""> <img src="images/eq2.avif" alt="Roasted Chicken"></a>
+              
+              
+            </div>
+            <div class="grid-item with-caption">
+                <a href=""><img src="images/eq3.avif" alt="Chicken Rounds"></a>
+          
+                
+            </div>
+            <div class="grid-item with-caption">
+              <a href=""> <img src="images/eq6.avif" alt="Fresh Fruit Muesli"></a>
+
+              </div>
+        </div>
+    </section>
+    <section class="food-gallery">
+        <div class="grid-container">
+            <div class="grid-item with-caption">
+              <a href=""> <img src="images/eq5.avif" alt="Italian Spicy Noodiles"></a>
+              
+              
+            </div>
+            <div class="grid-item with-caption">
+              <a href="" > <img src="images/eq4.avif" alt="Tossed Salad"></a>
+                
+              
+            </div>
+            <div class="grid-item with-caption">
+              <a href="">  <img src="images/eq6.avif" alt="Chettinad Egg Curry"></a>
+              
+              
+            </div>
+            <div class="grid-item with-caption">
+              <a href="">  <img src="images/eq.avif" alt="Microwave Chicken Steak"></a>
+          
+              
+            </div>
+        </div>
+    </section>
+    
+    
+    
+  
+  
+  
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      const foodGallerySections = document.querySelectorAll(".food-gallery .grid-item");
+  
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  entry.target.style.animationPlayState = "running";
+                  observer.unobserve(entry.target); // Optional: Unobserve after animation starts
+              }
+          });
+      }, { threshold: 0.1 }); // Trigger when at least 10% of the element is visible
+  
+      foodGallerySections.forEach((item) => {
+          item.style.animationPlayState = "paused"; // Pause animations initially
+          observer.observe(item);
+      });
+  });
+  
+  </script>
+  
+  
+  
+
+
+<section class="parallax-section">
+<div class="parallax-content">
+   
+    
+    <h1>Welcome to Ms Sports-View Plans</h1>
+    <p>Your Cricket Journey Starts Her</p>
+ 
+    
+</div>
+</section>
+
+<script>document.addEventListener("DOMContentLoaded", () => {
+const parallaxSection = document.querySelector(".parallax-section");
+const parallaxContent = document.querySelector(".parallax-content");
+
+const observer = new IntersectionObserver(
+(entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            parallaxContent.classList.add("visible");
+        }
+    });
+},
+{
+    threshold: 0.5, // Trigger when 50% of the section is visible
+}
+);
+
+observer.observe(parallaxSection);
+});
+</script>
+
+
+  
+  <section class="best-trainings">
+    <div class="container">
+      <div class="header">
+        <h2>Choose Your Plan – MS Sports</h2>
+        <p>
+          Find the perfect plan that matches your fitness goals and training needs. Whether you're a beginner or a pro, we have the right plan for you!.
+        </p>
+       <a href="about.html"> <button class="view-all-btn">View All Services</button></a>
+</div>
+        </div>
+     
+        <section class="plans-section">
+          <!-- 1 Month Plan -->
+          <div class="plan-card">
+            <h2 class="plan-price">₹1999/-</h2>
+            <p class="plan-discount">Discounted Price</p>
+            <p class="plan-original">Actual Price: ₹3000/-</p>
+            <h3 class="plan-duration">1 Month</h3>
+            <h3 class="plan-duration">Beginner Plan</h3>
+            <ul class="plan-features1">
+              <li>Cricket techniques</li>
+              <li> Coaching sessions</li>
+              <li>Fitness sessions</li>
+              <li> Rules & strategies</li>
+              <li>Workout sessions</li>
+              
+            </ul>
+            <a href="about.html"><button class="plan-btn">Get Started</button></a>
+          </div>
+      
+          <!-- 3 Months Plan -->
+          <div class="plan-card ">
+            <h2 class="plan-price">₹4999/-</h2>
+            <p class="plan-discount">Discounted Price</p>
+            <p class="plan-original">Actual Price: ₹6999/-</p>
+            <h3 class="plan-duration">3 Months</h3>
+            <h3 class="plan-duration"> Intermediate</h3>
+            <ul class="plan-features1">
+              <li>Fitness Training</li>
+              <li>Group Classes</li>
+              <li>Personal Training</li>
+              <li>Team Workouts</li>
+              <li>batting & bowling</li>
+            </ul>
+           <a href="about.html" ><button class="plan-btn">Get Started</button></a>
+          </div>
+      
+          <!-- 6 Months Plan -->
+          <div class="plan-card">
+            <h2 class="plan-price">₹8499/-</h2>
+            <p class="plan-discount">Discounted Price</p>
+            <p class="plan-original">Actual Price: ₹10,999/-</p>
+            <h3 class="plan-duration">6 Months</h3>
+            <h3 class="plan-duration">Advanced Plan </h3>
+            <ul class="plan-features1">
+              <li>Fitness Training</li>
+              <li>Group Classes</li>
+              <li>Personal Training</li>
+              <li>Team Workouts</li>
+              <li>Unlimited Classes</li>
+            </ul>
+            <a href="about.html" ><button class="plan-btn">Get Started</button></a>
+          </div>
+      
+          <!-- 12 Months Plan -->
+          <div class="plan-card">
+            <h2 class="plan-price">₹13,200/-</h2>
+            <p class="plan-discount">Discounted Price</p>
+            <p class="plan-original">Actual Price: ₹15,000/-</p>
+            <h3 class="plan-duration">12 Months</h3>
+            <h3 class="plan-duration">Pro Plan </h3>
+            <ul class="plan-features1">
+              <li>Fitness Training</li>
+              <li>Group Classes</li>
+              <li>Personal Training</li>
+              <li>Team Workouts</li>
+              <li>Unlimited Classes</li>
+            </ul>
+            <a href="about.html" ><button class="plan-btn">Get Started</button></a>
+          </div>
+          </section>
+          </section>
+          
+    
+      
+
+
+
+
+
+    <script>
+/// Select the plans section
+const plansSection = document.querySelector('.plans-section');
+
+// Define the observer options
+const options = {
+root: null, // Use the viewport as the root
+threshold: 0.1 // Trigger when 10% of the section is in view
+};
+
+// Create the observer callback function
+const observerCallback = (entries, observer) => {
+entries.forEach(entry => {
+  if (entry.isIntersecting) {
+    // Add the 'visible' class when the section is in view
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target); // Stop observing once it's in view
+  }
+});
+};
+
+// Create an intersection observer instance
+const observer = new IntersectionObserver(observerCallback, options);
+
+// Start observing the plans section
+observer.observe(plansSection);
+
+</script>
+
+
+
+
+
+
+<!-- Parallax Section -->
+<div class="parallax">
+  <div class="content-box">
+    <h2>Book Your First Slot</h2>
+    <p1>Get the best deals and start your fitness journey today!</p>
+    <a href="services.html">Get Started</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<section class="videos-section">
+  <h2>Our Featured Videos</h2>
+  <div class="videos-row">
+    <div class="video-card">
+      <video controls>
+        <source src="ms/@ms_indoor_cricketacademy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+     
+      
+    </div>
+    <div class="video-card">
+      <video controls>
+        <source src="ms/%23hyderabad%20%23%20indoor%20cricket%20academy%23%20Box%20cricket%23%20HYDERSHAKOTE,%20Suncity.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      
+    </div>
+  </div>
+  <div class="videos-row">
+    <div class="video-card">
+      <video controls>
+        <source src="ms/%23MS%20INDOOR%20CRICKET%20ACADEMY%20%40ms_indoor_cricketacademy%20%40manikreddy_07%20%40mahi_2122_%20%40rajashekar_reddy_sama%20%40bhaskargoud%20%40anaghparimi%20%40subbiramreddy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+     
+      
+    </div>
+    <div class="video-card">
+      <video controls>
+        <source src="ms/%23MS%20SPORTS%20ARENA,%20%23Rainy%20Box%20Cricket,%20%23hydershakote%20village,%20%23suncity.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      
+    </div>
+  </div>
+  
+  
+    <div class="btn">
+      <a href="gallery.html"><button>View More</button></a>
+    </div>
+</section>
+<style>
+
+
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn button {
+    background-color: black; /* Your preferred color */
+    color: white;
+    font-size: 16px;
+    
+    
+    padding: 12px 24px;
+    border: none;
+   
+    
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<footer class="footer">
+  <div class="container">
+    <div class="footer-section">
+   <img src="images/logo.jpg" alt="Logo" class="logo1"> <!-- Add your logo here -->
+      <p>In today's digital world, Avinya is revolutionizing online education by offering flexible, accessible, and high-quality learning experiences Whether you're a student, professional, or lifelong learner, Avinya provides a diverse range of courses tailored to your needs.</p>
+      <div class="social-icons2">
+        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+       
+       
+        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+      
+      
+      </div>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <a href="index.html"><p>HOME</p></a>
+    <a href="about.html" ><p>ABOUT US</p></a>
+    <a href="gallery.html"><p>GALLERY</p></a>
+     <a href="events.html"><p>EVENTS</p></a>
+   <a href="contact.html"><p>CONTACT</p></a>
+    </div>
+    <div class="footer-section">
+      <h3>Our Address</h3>
+      <p>PRAJAY PRINCETON TOWERS, #502, 5th Floor, Hyderabad, Telangana-500035</p>
+      <p><i class="fa-solid fa-phone"></i> <span> +91 8247547854</span></p>
+      <p><i class="fa fa-envelope"></i> <a href="Advoize2023@gmail.com">Advoize2023@gmail.com</a></p>
+    </div>
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <p>Receive the latest news from us.</p>
+      <form>
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit">Subscribe</button>
+        <div>
+          <input type="checkbox" id="privacy" required>
+          <label for="privacy">I agree to the Privacy Policy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p1>Copyright© 2025 Avinya, All rights reserved. Powered by Advoize. </p1>
+   
+    
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
