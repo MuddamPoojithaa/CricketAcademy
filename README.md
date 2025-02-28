@@ -1,6 +1,6 @@
 # cricket
 
-![Screenshot (56)](https://github.com/user-attachments/assets/be640b3f-bc20-4a52-a7e5-27ad6649842f)
+![Screenshot (63)](https://github.com/user-attachments/assets/a9db89b5-098d-4586-93a6-0a6f41d092ca)
 
 ![Screenshot (57)](https://github.com/user-attachments/assets/2082b6de-096b-4eeb-83cb-e34e8a0ff1b6)
 
